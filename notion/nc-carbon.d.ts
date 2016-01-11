@@ -14,9 +14,10 @@ declare module Notion.Boron.Module.Carbon.Service {
   abstract class DataService {
     private $http: ng.IHttpService;
     private ncToastService: Carbon.Service.ToastService;
+    private ncModalService: Carbon.Service.ModalService;
     private baseUrl: string;
     loading: boolean;
-    constructor($http: ng.IHttpService, ncToastService: Carbon.Service.ToastService, baseUrl: string);
+    constructor($http: ng.IHttpService, ncToastService: Carbon.Service.ToastService, ncModalService: Carbon.Service.ModalService, baseUrl: string);
     postCore<T>(url: string, data: any, callback: ng.IHttpPromiseCallback<T>): void;
   }
 }
