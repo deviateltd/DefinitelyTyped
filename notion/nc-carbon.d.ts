@@ -1,4 +1,13 @@
 declare module Notion.Boron.Module.Carbon.Service {
+  class DynamicDirectiveService {
+    private $compile;
+    constructor($compile: ng.ICompileService);
+    link<T>(scope: any, element: any, watch: string, nameProperty: (directive: any) => string, modelBuilder: (m: T, directive: any) => T): void;
+    linkArray<T>(scope: any, element: any, watch: string, nameProperty: (directive: any) => string, modelBuilder: (m: T, directive: any) => T): void;
+  }
+}
+
+declare module Notion.Boron.Module.Carbon.Service {
     class ModalService {
         private $uibModal;
         private modalInstance;
